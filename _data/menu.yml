@@ -1,16 +1,17 @@
 - title: "About"
   href: "/about/"
 
-- title: "Blog"
-  href: "/blog/"
+- title: "Census dataset"
+  href: "/censusdataset/"
 
-- title: "CV"
-  href: "/cv/"
+- title: "Source code and validation dataset"
+  href: "/codeanddataset/"
 
-- title: "Datasets"
+- title: "Papers"
   href: "/miscellany/"
   subcategories:
-    - subtitle: "Item 1"
-      subhref: "/miscellany/item-1/"
-    - subtitle: "Item 2"
-      subhref: "/miscellany/item-2/"
+    - subtitle: "Paper 1"
+      subhref: "/miscellany/paper1/"
+    - subtitle: "Paper 2"
+      subhref: "/miscellany/paper2/"
+- title: "Map"

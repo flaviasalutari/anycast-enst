@@ -1,21 +1,28 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Anycast geolocation
+email: dario.rossi@enst.fr
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This anycast discovery method allows for exhaustive and accurate enumeration and city-level geolocation of anycast replicas, with the constraints of only leverages a handful of latency measurements from a set of known probes.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+url: "https://anycast.telecom-paristech.fr" # the base hostname & protocol for your site
+twitter_username: newnetparis
 github_username:  jekyll
 plugins: ['jekyll/scholar']
 # Build settings
 markdown: kramdown
 
+
+
+scholar:
+  order: descending
+  bibliography_list_tag: ul
+  bibliography_template: bibliography
+
+  replace_strings: true
+
 # Other options
 permalink: blog/:year/:month/:title
-job.title: "Assistant Professor"
+job.title: "Full Professor"
 excerpt_separator: "<!--more-->"
 
 # SEO stuff

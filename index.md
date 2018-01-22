@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: default
 title: Anycast enumeration and geolocation
-permalink: /miscellany/
 ---
+
 
 Use of anycast IP addresses has increased in the last few years: once relegated to DNS root and top-level domain servers, anycast is now commonly used to assist distribution of general purpose content by CDN providers. Yet, most anycast discovery methodologies rely so far on DNS, which limits their usefulness to this particular service. This raises the need for protocol agnostic methodologies, that should additionally be as lightweight as possible in order to scale up anycast service discovery. Our anycast discovery method allows for exhaustive and accurate enumeration and city-level geolocation of anycast replicas, with the constraints of only leverages a handful of latency measurements from a set of known probes. The method, which exploits an iterative workflow to enumerate (optimization problem) and geolocate (classification problem) anycast instances, is described in {% cite jsac16 %},{% cite techrep16%},{% cite infocom15a %}. The method is so lightweight and protocol agnostic that we were able to perform several censuses of the whole IPv4 Internet (during March 2015), as described in {% cite conext15 %}. We keep performing such censuses and making this dataset available to the scientific community to the interactive Google maps interfaces accessible below.
 
@@ -40,14 +40,3 @@ iGreedy is introduced in {% cite infocom15a %}, thorougly analyzed in {% cite js
 We apply iGreedy since {% cite conext15 %} to collect monthly censuses of IPv4 anycast {% cite longitudinal17 %} (if still in doubt which is the most appropriate for your work don't hesitate to contact us!)
 
 {% bibliography %}
-
-<!-- 
-[^LONGITUDINAL-17]: [LONGITUDINAL-17] Cicalese, Danilo and Rossi, Dario, [A longitudinal study of IP Anycast](http://www.enst.fr/~drossi/paper/rossi17longitudinal.pdf). July 2017.
-[^JSAC-16]: [JSAC-16] Cicalese, Danilo, Joumblatt, Diana , Rossi, Dario, Buob, Marc-Olivier , Auge, Jordan and Friedman, Timur , [Latency-Based Anycast Geolocalization: Algorithms, Software and Datasets](http://www.enst.fr/~drossi/paper/rossi16jsac.pdf) . IEEE Journal on Selected Areas of Communications, Special issue on Measuring and Troubleshooting the Internet, 6:1889-1903, june 2016.
-[^TMA-16]: [TMA-16] Giordano, Danilo, Cicalese, Danilo, Finamore, Alessandro, Mellia, Marco, Munafo, Maurizio, Joumblatt, Diana and Rossi, Dario, [A First Characterization of Anycast Traffic from Passive Traces](http://www.enst.fr/~drossi/paper/rossi16tma.pdf) . In IFIP workshop on Traffic Monitoring and Analysis (TMA),, pages 30-38, April 2016.
-[^TECHREP-16]: [TECHREP-16] Cicalese, Danilo, Joumblatt, Diana , Rossi, Dario, Buob, Marc-Olivier , Auge, Jordan and Friedman, Timur , [Latency-Based Anycast Geolocalization: Algorithms, Software and Datasets (Extended Technical Report)](http://www.enst.fr/~drossi/dataset/anycast/anycast-techrep.pdf) . In Tech. Rep., 2016.
-[^CoNEXT-15]: [CoNEXT-15] Cicalese, Danilo, Auge, Jordan, Joumblatt, Diana, Friedman, Timur and Rossi, Dario, [Characterizing IPv4 Anycast Adoption and Deployment](http://www.enst.fr/~drossi/paper/rossi15conext.pdf) . In ACM CoNEXT, awarded the IRTF Applied Network Research Prize at IETF96, Heidelberg, December 2015.
-[^INFOCOM-15b]: [INFOCOM-15b] Cicalese, Danilo, Joumblatt, Diana , Rossi, Dario, Buob, Marc-Olivier , Auge, Jordan and Friedman, Timur , [A Lightweight Anycast Enumeration and Geolocation](http://www.enst.fr/~drossi/paper/rossi15infocom-b.pdf) . In IEEE INFOCOM, Demo Session, Hong Kong, China, Apr 2015.
-[^INFOCOM-15a]: [INFOCOM-15a] Cicalese, Danilo, Joumblatt, Diana , Rossi, Dario, Buob, Marc-Olivier , Auge, Jordan and Friedman, Timur , [A Fistful of Pings: Accurate and Lightweight Anycast Enumeration and Geolocation](http://www.enst.fr/~drossi/paper/rossi15infocom.pdf) . In IEEE INFOCOM, Hong Kong, China, Apr 2015.
-[^AIMS-15]: [AIMS-15] Cicalese, Danilo, Auge, Jordan, Joumblatt, Diana , Rossi, Dario and Friedman, Timur , [Anycast census and geolocation](http://www.enst.fr/~drossi/paper/rossi15aims.pdf) . In 7th Workshop on Active Internet Measurements (AIMS 2015), San Diego, CA, Mar 2015.
-[^AINTEC-2014]: [AINTEC-2014] D. Rossi, [Anycast enumeration and geolocation](http://www.enst.fr/~drossi/paper/rossi14aintec.pptx) . Technical report, Keynote speech at ACM SIGCOMM AINTEC'2014, 2014. -->

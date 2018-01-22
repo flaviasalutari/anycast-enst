@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Your awesome title</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+  <title>Anycast enumeration and geolocation</title>
+  <meta name="description" content="This anycast discovery method allows for exhaustive and accurate enumeration and city-level geolocation of anycast replicas, with the constraints of only leverages a handful of latency measurements from a set of known probes.
 ">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://localhost:4000/">
-  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://localhost:4000/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Anycast geolocation" href="http://localhost:4000/feed.xml" />
 <link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
 
@@ -28,7 +28,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Your awesome title</a>
+    <a class="site-title" href="/">Anycast geolocation</a>
 
 
     <nav class="site-nav">
@@ -52,24 +52,29 @@
     </li>
     
     
-     <li><a href="/blog/" class="page-link">Blog</a>
+     <li><a href="/censusdataset/" class="page-link">Census dataset</a>
     
     </li>
     
     
-     <li><a href="/cv/" class="page-link">CV</a>
+     <li><a href="/codeanddataset/" class="page-link">Source code and validation dataset</a>
     
     </li>
     
     
-    <li><a href="/miscellany/" class="page-link">Datasets</a>
+    <li><a href="/miscellany/" class="page-link">Papers</a>
     <ul class="sub-menu">
     
-    <li><a href="/miscellany/item-1/">Item 1</a></li>
+    <li><a href="/miscellany/paper1/">Paper 1</a></li>
     
-    <li><a href="/miscellany/item-2/">Item 2</a></li>
+    <li><a href="/miscellany/paper2/">Paper 2</a></li>
     
     </ul>
+    
+    </li>
+    
+    
+     <li><a href="" class="page-link">Map</a>
     
     </li>
     
@@ -109,13 +114,48 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-	
-<h1>Welcome</h1>
-	
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit mattis nulla eu cursus. Fusce finibus, orci sit amet tincidunt fermentum, risus ante pharetra nisi, eget tempus tellus tellus ut est. Nunc tempus cursus arcu mattis ultricies. Cras volutpat purus et lectus facilisis tempor. Suspendisse at lorem feugiat, feugiat massa vel, scelerisque dolor. Proin justo nisl, mattis eu sapien in, efficitur fringilla nulla. Phasellus placerat, lacus in venenatis tristique, risus dolor eleifend felis, vitae finibus augue nibh ut libero. Morbi sit amet tincidunt lorem.</p>
+        <p>Use of anycast IP addresses has increased in the last few years: once relegated to DNS root and top-level domain servers, anycast is now commonly used to assist distribution of general purpose content by CDN providers. Yet, most anycast discovery methodologies rely so far on DNS, which limits their usefulness to this particular service. This raises the need for protocol agnostic methodologies, that should additionally be as lightweight as possible in order to scale up anycast service discovery. Our anycast discovery method allows for exhaustive and accurate enumeration and city-level geolocation of anycast replicas, with the constraints of only leverages a handful of latency measurements from a set of known probes. The method, which exploits an iterative workflow to enumerate (optimization problem) and geolocate (classification problem) anycast instances, is described in <a href="#jsac16">(Cicalese et al., 2015)</a>,<a href="#techrep16">(Cicalese, Danilo and Auge, Jordan and Joumblatt, Diana and Friedman, Timur and Rossi, Dario, 2016)</a>,<a href="#infocom15a">(Cicalese et al., 2015)</a>. The method is so lightweight and protocol agnostic that we were able to perform several censuses of the whole IPv4 Internet (during March 2015), as described in <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a>. We keep performing such censuses and making this dataset available to the scientific community to the interactive Google maps interfaces accessible below.</p>
 
-</div>
+<h2 id="list-of-resources-at-a-glance">List of resources (at a glance)</h2>
+
+<p><img style="float: left;" width="64px" src="/images/googlemaps.png" />
+<strong>Googlemap interface:</strong>
+<br /> The new interface giving access to a spatio-temporal view of the <a href="http://goo.gl/MGDmCz">new monthly censuses</a> (since December 2015), described in <a href="#longitudinal17">(Cicalese &amp; Rossi, 2017)</a>
+The old version gives access to <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a> results and uses the googlemap engine demoed at <a href="#infocom15b">(Cicalese et al., 2015)</a>
+<br /><br /></p>
+
+<p><img style="float: left;" width="64px" src="/images/list.png" alt="" title="" />
+<strong>Anycast list:</strong>
+<br /> Browse the characteristics of monthly censuses in <a href="http://perso.telecom-paristech.fr/~drossi/anycastLongitudinalSlickgrid">tabular format</a> or check the <a href="http://goo.gl/DPUJz1">monhtly lists of anycast IP/24</a> (since December 2015)
+Results concerning the <a href="http://goo.gl/Ff8gdQ">top-100 anycast ASes</a> described in <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a> (March 2015)</p>
+
+<p><br /><br />
+<img style="float: left;" width="64px" src="/images/tarball.png" />
+<strong>Raw measurement:</strong>
+<br /> <a href="http://perso.telecom-paristech.fr/~drossi/index.php?n=Dataset.Anycast#censuses">Census</a> measurement (described in <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a>)
+Monthly <a href="http://perso.telecom-paristech.fr/~drossi/index.php?n=Dataset.Anycast#censuses">censuses</a> measurements since 2016/06 (described in <a href="#longitudinal17">(Cicalese &amp; Rossi, 2017)</a>)</p>
+
+<p><br /><br />
+<img style="float: left;" width="64px" src="/images/github.png" />
+<strong>Code and dataset:</strong>
+<br /> <a href="http://goo.gl/7ESrCR">version 1.0 of iGreedy source code</a>, including dataset with ground truth, used to obtain results of <a href="#jsac16">(Cicalese et al., 2015)</a>
+Our <a href="https://github.com/TeamRossi/anycast-census">scalable census analyzer</a>, used to analyze the above raw measurement <a href="#longitudinal17">(Cicalese &amp; Rossi, 2017)</a></p>
+
+<p><br /><br />
+<img style="float: left;" rowspan="5" width="64px" src="/images/papers.png" />
+<strong>Publications:</strong>
+ If you find these dataset and code useful, we would be grateful if you could please cite one of our papers in the <a href="http://perso.telecom-paristech.fr/~drossi/index.php?n=Dataset.Anycast#PAPER">publication</a> section.
+iGreedy is introduced in <a href="#infocom15a">(Cicalese et al., 2015)</a>, thorougly analyzed in <a href="#jsac16">(Cicalese et al., 2015)</a>  (and exhaustively analyzed in <a href="#techrep16">(Cicalese, Danilo and Auge, Jordan and Joumblatt, Diana and Friedman, Timur and Rossi, Dario, 2016)</a> ).
+We apply iGreedy since <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a> to collect monthly censuses of IPv4 anycast <a href="#longitudinal17">(Cicalese &amp; Rossi, 2017)</a> (if still in doubt which is the most appropriate for your work don’t hesitate to contact us!)</p>
+
+<ul class="bibliography"><li>bibliography</li>
+<li>bibliography</li>
+<li>bibliography</li>
+<li>bibliography</li>
+<li>bibliography</li>
+<li>bibliography</li>
+<li>bibliography</li>
+<li>bibliography</li></ul>
 
       </div>
     </div>
@@ -124,20 +164,20 @@
 
   <div class="wrapper">
 
-<!--     <h2 class="footer-heading">Your awesome title</h2> -->
+<!--     <h2 class="footer-heading">Anycast geolocation</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li><strong>Your awesome title</strong></li>
+          <li><strong>Anycast geolocation</strong></li>
 
-          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
+          <li><a href="mailto:dario.rossi@enst.fr">dario.rossi@enst.fr</a></li>
         </ul>
       </div>
 
       <div class="footer-col  footer-col-2">
         <ul class="social-media-list">
-          
+<!--           
           <li>
             <a href="https://github.com/jekyll">
               <span class="icon  icon--github">
@@ -149,11 +189,11 @@
               <span class="username">jekyll</span>
             </a>
           </li>
-          
+           -->
 
           
           <li>
-            <a href="https://twitter.com/jekyllrb">
+            <a href="https://twitter.com/newnetparis">
               <span class="icon  icon--twitter">
                 <svg viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -161,7 +201,7 @@
                 </svg>
               </span>
 
-              <span class="username">jekyllrb</span>
+              <span class="username">newnetparis</span>
             </a>
           </li>
           
@@ -170,7 +210,7 @@
 
       <div class="footer-col  footer-col-3">
          <p class="text">
-Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+This anycast discovery method allows for exhaustive and accurate enumeration and city-level geolocation of anycast replicas, with the constraints of only leverages a handful of latency measurements from a set of known probes.
  
       </div>
     </div>

@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Anycast enumeration and geolocation</title>
+  <title>Source code and validation dataset</title>
   <meta name="description" content="This anycast discovery method allows for exhaustive and accurate enumeration and city-level geolocation of anycast replicas, with the constraints of only leverages a handful of latency measurements from a set of known probes.
 ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/miscellany/">
+  <link rel="canonical" href="http://localhost:4000/codeanddataset/">
   <link rel="alternate" type="application/rss+xml" title="Anycast geolocation" href="http://localhost:4000/feed.xml" />
 <link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.4' type='text/css' media='all' />
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:600italic,600,400,400italic' rel='stylesheet' type='text/css'>
@@ -117,43 +117,25 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Anycast enumeration and geolocation</h1>
+    <h1 class="post-title">Source code and validation dataset</h1>
   </header>
 
   <article class="post-content">
-    <p>Use of anycast IP addresses has increased in the last few years: once relegated to DNS root and top-level domain servers, anycast is now commonly used to assist distribution of general purpose content by CDN providers. Yet, most anycast discovery methodologies rely so far on DNS, which limits their usefulness to this particular service. This raises the need for protocol agnostic methodologies, that should additionally be as lightweight as possible in order to scale up anycast service discovery. Our anycast discovery method allows for exhaustive and accurate enumeration and city-level geolocation of anycast replicas, with the constraints of only leverages a handful of latency measurements from a set of known probes. The method, which exploits an iterative workflow to enumerate (optimization problem) and geolocate (classification problem) anycast instances, is described in <a href="#jsac16">(Cicalese et al., 2015)</a>,<a href="#techrep16">(Cicalese, Danilo and Auge, Jordan and Joumblatt, Diana and Friedman, Timur and Rossi, Dario, 2016)</a>,<a href="#infocom15a">(Cicalese et al., 2015)</a>. The method is so lightweight and protocol agnostic that we were able to perform several censuses of the whole IPv4 Internet (during March 2015), as described in <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a>. We keep performing such censuses and making this dataset available to the scientific community to the interactive Google maps interfaces accessible below.</p>
+    <p>Results of a thorough validation campaign based on available ground truth (several DNS root servers and CDNs), using multiple measurement infrastructures (PlanetLab, RIPE), introduced in <a href="#infocom15a">(Cicalese et al., 2015)</a>, thorougly analyzed in <a href="#jsac16">(Cicalese et al., 2015)</a> and exhaustively analyzed in <a href="#techrep16">(Cicalese, Danilo and Auge, Jordan and Joumblatt, Diana and Friedman, Timur and Rossi, Dario, 2016)</a>). The code and validation datasets we used in these publications are available below.</p>
 
-<h2 id="list-of-resources-at-a-glance">List of resources (at a glance)</h2>
-
-<p><img style="float: left;" width="64px" src="/images/googlemaps.png" />
-<strong>Googlemap interface:</strong>
-<br /> The new interface giving access to a spatio-temporal view of the <a href="http://goo.gl/MGDmCz">new monthly censuses</a> (since December 2015), described in <a href="#longitudinal17">(Cicalese &amp; Rossi, 2017)</a>
-The old version gives access to <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a> results and uses the googlemap engine demoed at <a href="#infocom15b">(Cicalese et al., 2015)</a>
-<br /><br /></p>
-
-<p><img style="float: left;" width="64px" src="/images/list.png" alt="" title="" />
-<strong>Anycast list:</strong>
-<br /> Browse the characteristics of monthly censuses in <a href="http://perso.telecom-paristech.fr/~drossi/anycastLongitudinalSlickgrid">tabular format</a> or check the <a href="http://goo.gl/DPUJz1">monhtly lists of anycast IP/24</a> (since December 2015)
-Results concerning the <a href="http://goo.gl/Ff8gdQ">top-100 anycast ASes</a> described in <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a> (March 2015)</p>
-
-<p><br /><br />
-<img style="float: left;" width="64px" src="/images/tarball.png" />
-<strong>Raw measurement:</strong>
-<br /> <a href="http://perso.telecom-paristech.fr/~drossi/index.php?n=Dataset.Anycast#censuses">Census</a> measurement (described in <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a>)
-Monthly <a href="http://perso.telecom-paristech.fr/~drossi/index.php?n=Dataset.Anycast#censuses">censuses</a> measurements since 2016/06 (described in <a href="#longitudinal17">(Cicalese &amp; Rossi, 2017)</a>)</p>
-
-<p><br /><br />
-<img style="float: left;" width="64px" src="/images/github.png" />
-<strong>Code and dataset:</strong>
-<br /> <a href="http://goo.gl/7ESrCR">version 1.0 of iGreedy source code</a>, including dataset with ground truth, used to obtain results of <a href="#jsac16">(Cicalese et al., 2015)</a>
-Our <a href="https://github.com/TeamRossi/anycast-census">scalable census analyzer</a>, used to analyze the above raw measurement <a href="#longitudinal17">(Cicalese &amp; Rossi, 2017)</a></p>
-
-<p><br /><br />
-<img style="float: left;" rowspan="5" width="64px" src="/images/papers.png" />
-<strong>Publications:</strong>
- If you find these dataset and code useful, we would be grateful if you could please cite one of our papers in the <a href="http://perso.telecom-paristech.fr/~drossi/index.php?n=Dataset.Anycast#PAPER">publication</a> section.
-iGreedy is introduced in <a href="#infocom15a">(Cicalese et al., 2015)</a>, thorougly analyzed in <a href="#jsac16">(Cicalese et al., 2015)</a>  (and exhaustively analyzed in <a href="#techrep16">(Cicalese, Danilo and Auge, Jordan and Joumblatt, Diana and Friedman, Timur and Rossi, Dario, 2016)</a> ).
-We apply iGreedy since <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman, &amp; Rossi, 2015)</a> to collect monthly censuses of IPv4 anycast <a href="#longitudinal17">(Cicalese &amp; Rossi, 2017)</a> (if still in doubt which is the most appropriate for your work don’t hesitate to contact us!)</p>
+<ul>
+  <li>We are planning to open the iGreedy GitHub soon
+    <ul>
+      <li>The code integrates with the new RIPE streaming APIs, if you want to beta-test please send us an email</li>
+    </ul>
+  </li>
+  <li>You can find <a href="http://goo.gl/7ESrCR">version 1.0 of iGreedy source code</a>, with which you can
+    <ul>
+      <li>reply our experiments on our collected dataset and groundtruth</li>
+      <li>generate and analyze new datasets over RIPE Atlas (provided you have an account and credits)</li>
+    </ul>
+  </li>
+</ul>
 
 <ul class="bibliography"><li>bibliography</li>
 <li>bibliography</li>
@@ -163,17 +145,6 @@ We apply iGreedy since <a href="#conext15">(Cicalese, Auge, Joumblatt, Friedman,
 <li>bibliography</li>
 <li>bibliography</li>
 <li>bibliography</li></ul>
-
-<!-- 
-[^LONGITUDINAL-17]: [LONGITUDINAL-17] Cicalese, Danilo and Rossi, Dario, [A longitudinal study of IP Anycast](http://www.enst.fr/~drossi/paper/rossi17longitudinal.pdf). July 2017.
-[^JSAC-16]: [JSAC-16] Cicalese, Danilo, Joumblatt, Diana , Rossi, Dario, Buob, Marc-Olivier , Auge, Jordan and Friedman, Timur , [Latency-Based Anycast Geolocalization: Algorithms, Software and Datasets](http://www.enst.fr/~drossi/paper/rossi16jsac.pdf) . IEEE Journal on Selected Areas of Communications, Special issue on Measuring and Troubleshooting the Internet, 6:1889-1903, june 2016.
-[^TMA-16]: [TMA-16] Giordano, Danilo, Cicalese, Danilo, Finamore, Alessandro, Mellia, Marco, Munafo, Maurizio, Joumblatt, Diana and Rossi, Dario, [A First Characterization of Anycast Traffic from Passive Traces](http://www.enst.fr/~drossi/paper/rossi16tma.pdf) . In IFIP workshop on Traffic Monitoring and Analysis (TMA),, pages 30-38, April 2016.
-[^TECHREP-16]: [TECHREP-16] Cicalese, Danilo, Joumblatt, Diana , Rossi, Dario, Buob, Marc-Olivier , Auge, Jordan and Friedman, Timur , [Latency-Based Anycast Geolocalization: Algorithms, Software and Datasets (Extended Technical Report)](http://www.enst.fr/~drossi/dataset/anycast/anycast-techrep.pdf) . In Tech. Rep., 2016.
-[^CoNEXT-15]: [CoNEXT-15] Cicalese, Danilo, Auge, Jordan, Joumblatt, Diana, Friedman, Timur and Rossi, Dario, [Characterizing IPv4 Anycast Adoption and Deployment](http://www.enst.fr/~drossi/paper/rossi15conext.pdf) . In ACM CoNEXT, awarded the IRTF Applied Network Research Prize at IETF96, Heidelberg, December 2015.
-[^INFOCOM-15b]: [INFOCOM-15b] Cicalese, Danilo, Joumblatt, Diana , Rossi, Dario, Buob, Marc-Olivier , Auge, Jordan and Friedman, Timur , [A Lightweight Anycast Enumeration and Geolocation](http://www.enst.fr/~drossi/paper/rossi15infocom-b.pdf) . In IEEE INFOCOM, Demo Session, Hong Kong, China, Apr 2015.
-[^INFOCOM-15a]: [INFOCOM-15a] Cicalese, Danilo, Joumblatt, Diana , Rossi, Dario, Buob, Marc-Olivier , Auge, Jordan and Friedman, Timur , [A Fistful of Pings: Accurate and Lightweight Anycast Enumeration and Geolocation](http://www.enst.fr/~drossi/paper/rossi15infocom.pdf) . In IEEE INFOCOM, Hong Kong, China, Apr 2015.
-[^AIMS-15]: [AIMS-15] Cicalese, Danilo, Auge, Jordan, Joumblatt, Diana , Rossi, Dario and Friedman, Timur , [Anycast census and geolocation](http://www.enst.fr/~drossi/paper/rossi15aims.pdf) . In 7th Workshop on Active Internet Measurements (AIMS 2015), San Diego, CA, Mar 2015.
-[^AINTEC-2014]: [AINTEC-2014] D. Rossi, [Anycast enumeration and geolocation](http://www.enst.fr/~drossi/paper/rossi14aintec.pptx) . Technical report, Keynote speech at ACM SIGCOMM AINTEC'2014, 2014. -->
 
   </article>
 
